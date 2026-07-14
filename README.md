@@ -31,24 +31,27 @@ Processor:
 
 ```sh
 cd rv32i_single_cycle
-iverilog -g2005 -o simv_cpu -s tb_rv32i tb/tb_rv32i.v rtl/*.v ../accelerator/rtl/*.v
+iverilog -g2012 -o simv_cpu -s tb_rv32i tb/tb_rv32i.v rtl/*.v ../accelerator/rtl/*.v
 vvp simv_cpu
+gtkwave tb_rv32i.vcd
 ```
 
 Accelerator:
 
 ```sh
 cd accelerator
-iverilog -g2005 -o simv -s tb_hardware_accelerator tb/tb_hardware_accelerator.v rtl/*.v
-vvp simv
+iverilog -g2012 -o simv_accel_only -s tb_hardware_accelerator tb/tb_hardware_accelerator.v rtl/*.v
+vvp simv_accel_only 
+gtkwave tb_hardware_accelerator.vcd
 ```
 
-CPU + accelerator integration:
+CPU + accelerator integration mode1-MAC:
 
 ```sh
 cd rv32i_single_cycle
-iverilog -g2005 -o simv_accel -s tb_rv32i_accel tb/tb_rv32i_accel.v rtl/*.v ../accelerator/rtl/*.v
+iverilog -g2012 -o simv_accel -s tb_rv32i_accel tb/tb_rv32i_accel.v rtl/*.v ../accelerator/rtl/*.v
 vvp simv_accel
+gtkwave tb_rv32i_accel.vcd
 ```
 
 ## License
