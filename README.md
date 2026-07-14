@@ -3,9 +3,9 @@ This repository contains a Verilog-based RV32I single-cycle processor and a cust
 
 ## Contents
 
-- [`rv32i_single_cycle/`](./rv32i_single_cycle): 32-bit RV32I processor with modular fetch, decode, execute, memory, and writeback blocks
-- [`accelerator/`](./accelerator): standalone accelerator with MAC, 4-element dot product, and 4x4 systolic matrix multiply modes
-- [`docs/images/`](./docs/images): place for diagrams, screenshots, and waveform images
+- [`rv32i_single_cycle/`](./rv32i_single_cycle): 32-bit RV32I processor with modular fetch, decode, execute, memory, and writeback blocks.
+- [`accelerator/`](./accelerator): standalone accelerator with MAC, 4-element dot product, and 4x4 systolic matrix multiply modes.
+- [`images/`](./images): place for output waveform images.
 
 ## Features
 
